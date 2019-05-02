@@ -1,11 +1,11 @@
 <template>
-	<input type="text" />
+	<div>profiler</div>
 </template>
 <script>
 export default {
 	
 }
 </script>
-<style scoped>
+<style modules>
 
 </style>
