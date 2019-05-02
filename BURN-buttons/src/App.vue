@@ -8,9 +8,10 @@
 
 <template>
   <div id="app">
-
-    <Skills msg="Welcome to Your Vue.js App"/>
-
+    <!-- input -->
+    <!-- search btn -->
+    <!-- result -->
+    <!-- personal profiler -->
   </div>
 </template>
 
@@ -19,14 +20,10 @@
  |*  name the component, import vuex state and actions, declare prop requirements,
  |*  create watch functions,   -->
 <script>
-import Skills from './components/Skills.vue'
-
 export default {
-  name: 'app',
-  components: {
-    Skills
-  }
-}
+  name: "app",
+  components: {}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only 
@@ -37,15 +34,16 @@ export default {
  |*  i.e :class="$style.button" modules improves readabability on html in the browser-->
 <style modules>
 body {
-  background-color: #EEE;
+  background-color: #eee;
   display: grid;
   grid-template-rows: auto;
   align-items: center;
 }
 
-nody, html {
+nody,
+html {
   margin: 0 auto;
-  height: 100%
+  height: 100%;
 }
 
 #app {
