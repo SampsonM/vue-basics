@@ -25,7 +25,7 @@ There are tons of articles outlining how Vue and how its internals work.
 
 [How to build vue components like a pro](https://blog.bitsrc.io/how-to-build-vue-components-like-a-pro-fd89fd4d524d) - Good to learn how to build class components with slots and props, and create functional templates
 
-These are just a few and are all great but they take a lot of reading, so I'm going to simplify this with some simple code examples and build a quick guide that can be used as reference.
+These are just a few and are all great but they take a lot of reading, so I'm going to hugely simplify this with some simple code examples and build a quick and simple guide that can be used as reference.
 
 
 #### how does it work then...
