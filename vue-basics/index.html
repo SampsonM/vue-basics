@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <title>Vue-Sessions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    <!-- What is VueJS? https://vuejs.org/v2/guide/
+    |   progressive, performant, approachable, versatile
+    |
+    |   Giving our root div the id of 'app' allows us to refer to
+    |   a section of our page, to bind our Vue instance to -->
+
+    <div id="app" class="ui container">
+
+        <!-- We can use : as a short hand for v-bind:
+        |   v-bind:href="linkToMSM" === :href="linkToMSM" -->
+
+        <a :href="linkToMSM" target="blank">
+
+            <!-- We can use computed properties to return a value
+            |   that is created using of a number of different values 
+            |
+            |   In this scenario we can use template literals to print
+            |   out the value of the variable -->
+
+            {{ title }}
+        </a>
+
+
+        <!-- v-show hides an element using the css attribute display: none;
+        |   to toggle if the page should paint the element  -->
+
+        <p v-show="lotsOfIncidents"> Too many incidents </p>
+        <p v-show="!lotsOfIncidents"> no incidents </p>
+
+
+        <!-- v-if/ v-else hides the element completely from the user
+        |   this can be more expensive as it requires a re-render of the parent
+        |   not just adding or removing css classes -->
+
+        <p v-if="tickets.length > 0" style="color: red"> Work available to pick up </p>
+        <p v-else style="color: green"> No work to pick up </p>
+
+
+        <div class="ui very relaxed list">
+
+            <!-- We can model data in the vue instance to the html creating a two
+            |   way binding that updates both the vue instance and the html
+            |
+            |    v-model is shorthand for:
+            | 
+            |        :value="dataProperty"
+            |        @input="dataProperty = $event.target.value" -->
+
+            <div class="ui item input">
+
+                <input
+                    type="text"
+                    v-model="ticketTitle">
+
+                <div class="ui left pointing label">
+                    Ticket title
+                </div>
+            </div>
+
+            <div class="ui item input">
+
+                <input
+                    type="text"
+                    v-model.lazy="releaseDate">
+
+                <div class="ui left pointing label">
+                    Release date
+                </div>
+            </div>
+    
+
+            <!-- We can invoke methods written inside of the Vue instance from the html
+            |
+            |   inbuilt event modifiers such as .prevent are available to change default html behaviour
+            |       - https://vuejs.org/v2/guide/events.html#Event-Modifiers
+            |
+            |   and they tell Vue how to react to the event, i.e don't refresh the page!! -->
+
+            <button
+                class="ui button"
+                @click.prevent="addTicket">
+                Add Ticket
+            </button>
+        </div>
+
+        <div class="ui container">
+            <section class="ui very relaxed divided list">
+
+                <!-- You can loop over data, using v-for, from the Vue instance to reduce
+                |   HTML mark-up and improve readability in applications where
+                |   components are cumbersome and difficult to understand 
+                |   
+                |   You can access the iteratee and the index as follows -->
+
+                <div 
+                    v-for="(ticket, index) in tickets"
+                    class="item"
+                    :key="index">
+
+                    <div 
+                        class="ui card"
+                        :class="{ 'greenBG' : ticket.done }">
+                        <div class="content">
+
+                            <!-- You can then use these values by referencing the
+                            |    title you gave it in the loop -->
+
+                            <p class="header">Ticket: {{ ticket.title }}</p>
+                        </div>
+                        <div class="content inline">
+                            <p>Release date: {{ ticket.releaseDate }}</p>
+
+                            <div class="ui buttons">
+                                <button
+                                    class="ui positive button"
+                                    @click="completeTicket(index)">
+                                    Done
+                                </button>
+
+                                <div class="or"></div>
+
+                                <button 
+                                    class="ui negative button"
+                                    @click="removeTicket(index)">
+                                    Delete
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- We are building this very simple vue app with the standard Vue CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- This script is where we pull in our vue instance and run the JS that
+    builds up the virtual DOM and renders what we want to see on the page -->
+    <script src="index.js"></script>
+</body>
+</html>

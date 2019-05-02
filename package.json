@@ -1,0 +1,24 @@
+{
+  "name": "vue-prac",
+  "version": "1.0.0",
+  "description": "Vue practice sessions for Energy - BURN",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markSampson18/vue-practice.git"
+  },
+  "keywords": [
+    "vue",
+    "Burn",
+    "Energy"
+  ],
+  "author": "M.Sampson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/markSampson18/vue-practice/issues"
+  },
+  "homepage": "https://github.com/markSampson18/vue-practice#readme"
+}
