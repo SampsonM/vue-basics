@@ -1,6 +1,6 @@
 # SET-UP
 
-### All the documentation you will need is [here](https://vuejs.org/v2/guide/)
+### All the documentation you will need is [here](https://vuejs.org/v2/guide/), this project won't describe every little step but give an introduction to into pieces of what Vue is and provide the documentation where neccassary
 
 * Use the [Vue-cli](https://cli.vuejs.org/) to create a vue app, choose the default setup
 
