@@ -28,7 +28,7 @@ There are tons of articles outlining how Vue and how its internals work.
 These are just a few and are all great but they take a lot of reading, so I'm going to simplify this with some simple code examples and build a quick guide that can be used as reference.
 
 
-+ how does it work then...
+#### how does it work then...
 
 1. A Vue instance is created *, a JS object which holds the methods, data and components,* and targets an element in the HTML to attach the instance to
 
