@@ -13,7 +13,7 @@ It allows developers to quickly prototype user interfaces, but also build full s
 
 ### How it works?
 
-There are tons of articles out lining how Vue works and how the internals unfold but as I understand it they didn't help me too much, ghey may help you so I've attached those anyway.
+There are tons of articles outlining how Vue and how its internals work.
 
 [Demystifying Vue Internals](https://medium.com/js-imaginea/the-vue-js-internals-7b76f76813e3) - good for learning about compilation and reactivity
 
