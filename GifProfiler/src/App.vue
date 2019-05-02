@@ -9,14 +9,7 @@
 
 <template>
   <div id="app">
-    <!-- input -->
-    <Input /> 
-    <!-- search btn -->
-    <Button />
-    <!-- result -->
-    <Display />
-    <!-- personal profiler -->
-    <Profiler />
+    <Display @save="saveSearchFieldValue" />
   </div>
 </template>
 
@@ -25,13 +18,26 @@
  |   name the component, import vuex state and actions, declare prop requirements,
  |   create watch functions...   -->
 <script>
-import Components from './components'
+import Display from './components/Display.vue'
+import Profiler from './components/Profiler.vue'
 
 export default {
   name: "app",
   components: {
-    ...Components
-  }
+    Profiler,
+    Display
+  },
+  data() {
+    return {
+      searchFieldValue: ''
+    }
+  },
+  methods: {
+		saveSearchFieldValue(value) {
+			console.log(value)
+			this.searchFieldValue = value
+		}
+	}
 };
 </script>
 

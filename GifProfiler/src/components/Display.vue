@@ -1,7 +1,6 @@
 <template>
-	<div>
-		Im a display for gifs
-	</div>
+	<input type="text" 
+		@keyup="(event) => $emit('save', event.target.value)">
 </template>
 <script>
 export default {
