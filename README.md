@@ -8,11 +8,11 @@
 
 It allows developers to quickly prototype user interfaces, but also build scalable appls that are predicted to growing rapidly. It can be adopted incrementally or used to build SPA's that can make use of vue tools such as Vuex state management and the Vue-router.
 
+*This document assumes you have some understanding of JS, however, I will link certain Mozilla and Vue docs where approproate*
+
 #
 
 ### How it works?
-
-*This document assumes you have some understanding of JS, however, I will link certain Mozilla docs where approproate*
 #
 
 There are tons of articles outlining how Vue and how its internals work.
