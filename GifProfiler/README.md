@@ -27,7 +27,7 @@
 #
 ## Approach
 
-This is where you have to start creating your app, using the last basic example of an simple vue app, create an app that uses seperate Vue SFC's to create minimal html and readable methods that live in the right place.
+This is where you have to start creating your app, using the last basic example of a simple vue app, create an app that uses seperate Vue SFC's to create minimal html and readable methods that live in the right place.
 
 - First create an [SFC](https://vuejs.org/v2/guide/single-file-components.html) for a search box, an SFC is a vue component/file that has:
  	* a template tag to house the html
