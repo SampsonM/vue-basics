@@ -5,7 +5,6 @@
 
 - Understandable
 - Fast
-- Flexible
 
 It allows developers to quickly prototype user interfaces, but also build scalable appls that are predicted to growing rapidly. It can be adopted incrementally or used to build SPA's that can make use of vue tools such as Vuex state management and the Vue-router.
 
