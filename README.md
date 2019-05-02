@@ -32,7 +32,7 @@ These are just a few and are all great but they take a lot of reading, so I'm go
 
 1. A Vue instance is created *, a JS object which holds the methods, data and components,* and targets an element in the HTML to attach the instance to
 
-*Used to inject vue into a simple website*
+*Example 1 used to inject vue into a simple website*
 ```javascript
 // index.js
 const app = new Vue({
@@ -40,18 +40,18 @@ const app = new Vue({
 })
 ```
 
-*Used when bundling your app with Vue-cli (webpack under the hood)*
+*Example 2 used when bundling your app with Vue-cli (webpack under the hood)*
 ```javascript
 // Main.js
 import App from './fileThatContainsYourAppComponent.vue'
 
 new Vue({
-	// The hyperscript function h() creates virtual DOM objects, h essentially means createElement
+	// The hyperscript function h() creates JS virtual DOM objects from HTML, h essentially means createElement
 	render: h => h(App)
 }).$mount('#app')
 ```
 
-2. Now a JS Object copy of the DOM has been created called a 'VirtualDOM', so if you change any data Vue compares the VirtualDOM and rendered DOM to find differences, it can then update only the required part of the DOM and bundle smaller changes into single renders to improve performance.
+2. Now, a JS Object copy of the DOM has been created called a 'VirtualDOM', so if you change any data Vue compares the VirtualDOM and rendered DOM to find differences, it can then rerender only the required part of the DOM and bundle smaller changes into single renders to improve performance.
 
 #
 ### What is the VirtualDOM?
@@ -88,8 +88,10 @@ const app = new Vue({
 </template>
 <script>
 export default {
-	data: {
-		myLongTitle: 'A really long title that would make the html look a bit annoying to read, also this is a terrible example'
+	data() {
+		return {
+			myLongTitle: 'A really long title that would make the html look a bit annoying to read, also this is a terrible example'
+		}
 	}
 }
 </script>
