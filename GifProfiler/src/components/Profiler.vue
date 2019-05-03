@@ -1,6 +1,6 @@
 <template>
 	<div class="profiler">
-		<Button  />
+		<Button @click="searchGif"  />
 		<SearchField @save="saveSearchFieldValue" />
 	</div>
 </template>
@@ -22,6 +22,9 @@ export default {
     saveSearchFieldValue(value) {
       console.log(value);
       this.searchFieldValue = value;
+    },
+    searchGif() {
+      console.log("Searched for gif");
     }
   }
 };
