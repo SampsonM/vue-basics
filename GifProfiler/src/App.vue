@@ -9,7 +9,7 @@
 
 <template>
   <div id="app">
-    <Profiler />
+    <Profiler class="nes-text is-primary" />
   </div>
 </template>
 
@@ -40,11 +40,18 @@ export default {
  |   to access classes from '$style' object whilst using dynamic class style bindings
  |   i.e :class="$style.button", modules also improves readabability or html in the browser-->
 <style modules>
+@font-face {
+  font-family: kongtext;
+  src: url("./assets/kongtext/kongtext.ttf");
+  font-weight: 400;
+}
+
 body {
   background-color: #eee;
   display: grid;
   grid-template-rows: auto;
   align-items: center;
+  font-family: kongtext;
 }
 
 body,
