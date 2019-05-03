@@ -1,11 +1,11 @@
 <template>
-	<input type="text" />
+	<input type="text" 
+		@keyup="(event) => $emit('save', event.target.value)">
 </template>
-<script>
-export default {
-	
-}
-</script>
-<style scoped>
 
+<script>
+export default {};
+</script>
+
+<style scoped>
 </style>
