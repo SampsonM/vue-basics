@@ -1,9 +1,10 @@
 const app = new Vue({
     el: '#app',
     // The data object is where you store the data relevant to your page or component
-    // you can add any type of data that you wish as this is just a JS object
-    // you have access to this data within your HTML and within this vue instance
-    // to access it in the HTMLL use the template syntax --> {{ liveIncidents }} 
+    // and can add any data you wish as this is just a JS object
+    //
+    // you can access this data within your HTML or this vue instance
+    // to access it in the HTML use the template syntax --> {{ liveIncidents }} 
     // to access it in this instance use this. syntax -----> if (this.releaseDate)
     data: {
         liveIncidents: 9,
