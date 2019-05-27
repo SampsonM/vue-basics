@@ -57,6 +57,10 @@ new Vue({
 
 When creating the vue instance it is passed templates of HTML that it [transforms](https://vuejs.org/v2/guide/render-function.html#The-Virtual-DOM) into JS copies of [DOM Nodes](https://developer.mozilla.org/en-US/docs/Web/API/Node)
 
+When this is done alot of the wasteful static and repeated information is stripped out and saved for when it is needed later, this reduces the time vue spends comparing the relevant data.
+
+The virtual DOM exists as comparing JS nodes is far less expensive and time consuming than reading directly from the DOM.
+
 #
 ### What is data?
 
