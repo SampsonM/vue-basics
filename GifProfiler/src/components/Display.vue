@@ -9,12 +9,7 @@
 import { mapState } from 'vuex'
 export default {
 	name: 'display',
-	computed: {
-		...mapState([
-			'gifs'
-		])
-	}
-};
+}
 </script>
 <style modules>
 </style>
