@@ -45,7 +45,8 @@ const app = new Vue({
 import App from './fileThatContainsYourAppComponent.vue'
 
 new Vue({
-	// The hyperscript function h() creates JS virtual DOM objects from HTML, h essentially means createElement
+	// The hyperscript function h() creates JS virtual DOM objects from HTML,
+	// h essentially means createElement
 	render: h => h(App)
 }).$mount('#app')
 ```
