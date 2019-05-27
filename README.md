@@ -14,7 +14,7 @@ It allows developers to quickly prototype user interfaces, but also build scalab
 
 ### How it works?
 
-There are tons of articles out lining how Vue works and how the internals unfold but as I understand it they didn't help me too much, they may help you so I've attached those anyway.
+There are tons of articles outlining how Vue and its internals work, but for me they don't serve as a quick refernece point to refresh my memory, they are however great for learning more in depth on vue as a starting point so I've linked them anyway.
 
 [Demystifying Vue Internals](https://medium.com/js-imaginea/the-vue-js-internals-7b76f76813e3) - good for learning about compilation and reactivity
 
@@ -56,8 +56,6 @@ new Vue({
 ### What is the VirtualDOM?
 
 When creating the vue instance it is passed templates of HTML that it [transforms](https://vuejs.org/v2/guide/render-function.html#The-Virtual-DOM) into JS copies of [DOM Nodes](https://developer.mozilla.org/en-US/docs/Web/API/Node)
-
-And that, is the simplest description I can come up with
 
 #
 ### What is data?
