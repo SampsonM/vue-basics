@@ -46,12 +46,14 @@ import App from './fileThatContainsYourAppComponent.vue'
 
 new Vue({
 	// The hyperscript function h() creates JS virtual DOM objects from HTML,
-	// h essentially means createElement
+	// h essentially means createElement**
 	render: h => h(App)
 }).$mount('#app')
 ```
 
 2. Now, a JS Object copy of the DOM has been created called a 'VirtualDOM', so if you change any data Vue compares the VirtualDOM and rendered DOM to find differences, it can then rerender only the required part of the DOM and bundle smaller changes into single renders to improve performance.
+
+** for more on the h method see [here](https://css-tricks.com/what-does-the-h-stand-for-in-vues-render-method/)
 
 #
 ### What is the VirtualDOM?
