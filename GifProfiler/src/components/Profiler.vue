@@ -29,9 +29,8 @@ export default {
     },
     searchGif() {
       console.log("Searched for gif")
-      this.$store.dispatch('GetGifs', this.searchFieldValue)
-    },
-    
+      this.$store.dispatch('SearchGifs', this.searchFieldValue)
+    }
   }
 };
 </script>

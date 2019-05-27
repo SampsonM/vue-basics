@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div v-for="(gif, i) in gifs" :key="i">
-			<img :src="gif" alt="random-gif">
+			<img :src="gif.images.original.url" alt="random-gif">
 		</div>
 	</div>
 </template>

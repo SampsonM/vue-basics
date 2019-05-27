@@ -20,10 +20,9 @@ export default new Vuex.Store({
     //
     // example dispatch of action - store.dispatch('increment', payload)
     actions: {
-        async GetGifs({ commit }, payload) {
-            const response = await axios.get('https://api.giphy.com/v1/gifs/random?api_key=6l2Rn2SRC7COXlmhJ3muH74FmAkIzrgA&tag=&rating=G')
-            // 6l2Rn2SRC7COXlmhJ3muH74FmAkIzrgA
-            commit('UPDATE_GIFS', response.data.data.images.original.url)
+        async SearchGifs({ commit }, payload) {
+            const response = await axios.get(`https://api.giphy.com/v1/gifs/search?api_key=6l2Rn2SRC7COXlmhJ3muH74FmAkIzrgA&q=${payload}&limit=5&offset=0&rating=PG&lang=en`)
+            commit('UPDATE_GIFS', response.data.data)
         }
     },
 
@@ -33,7 +32,7 @@ export default new Vuex.Store({
     // example commit mutation - store.commit('increment')
     mutations: {
         UPDATE_GIFS(state, payload) {
-            state.gifs.push(payload)
+            state.gifs.push(...payload)
         }
     },
 
@@ -45,14 +44,6 @@ export default new Vuex.Store({
         countNumber(state) {
             return state.count
         },
-
-        // You can also return a function which is useful for allowing
-        // the user to query the store
-        //
-        // example - store.getters.getToDoById(2)
-        getToDoById: (state) => (id) => {
-            return state.todos.find(todo => todo.id === id)
-        }
     }
 })
 
