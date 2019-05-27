@@ -1,8 +1,20 @@
 <template>
-	
+	<div>
+		<div v-for="(gif, i) in gifs" :key="i">
+			<img :src="gif" alt="random-gif">
+		</div>
+	</div>
 </template>
 <script>
-export default {};
+import { mapState } from 'vuex'
+export default {
+	name: 'display',
+	computed: {
+		...mapState([
+			'gifs'
+		])
+	}
+};
 </script>
 <style modules>
 </style>
