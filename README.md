@@ -45,20 +45,20 @@ const app = new Vue({
 import App from './fileThatContainsYourAppComponent.vue'
 
 new Vue({
-	// The hyperscript function h() creates JS virtual DOM objects from HTML,
+	// The hyperscript function h() creates JS virtual DOM objects from SFC templates,
 	// h essentially means createElement**
 	render: h => h(App)
 }).$mount('#app')
 ```
 
-2. Now, a JS Object copy of the DOM has been created called a 'VirtualDOM', so if you change any data Vue compares the VirtualDOM and rendered DOM to find differences, it can then rerender only the required part of the DOM and bundle smaller changes into single renders to improve performance.
+2. Now, a JS Object copy of the DOM has been created called a 'VirtualDOM', so if you change any data Vue compares the New VirtualDOM and old virtual DOM to check for changes, it can then re-render only the required components in the DOM and bundles smaller changes into single renders to improve performance.
 
 ** for more on the h method see [here](https://css-tricks.com/what-does-the-h-stand-for-in-vues-render-method/)
 
 #
 ### What is the VirtualDOM?
 
-When creating the vue instance it is passed templates of HTML that it [transforms](https://vuejs.org/v2/guide/render-function.html#The-Virtual-DOM) into JS copies of [DOM Nodes](https://developer.mozilla.org/en-US/docs/Web/API/Node)
+When creating the vue instance it is passed SFC templates of HTML that it [transforms](https://vuejs.org/v2/guide/render-function.html#The-Virtual-DOM) into JS objects of [DOM Nodes](https://developer.mozilla.org/en-US/docs/Web/API/Node)
 
 When this is done alot of the wasteful static and repeated information is stripped out and saved for when it is needed later, this reduces the time vue spends comparing the relevant data.
 
@@ -67,7 +67,7 @@ The virtual DOM exists as comparing JS nodes is far less expensive and time cons
 #
 ### What is data?
 
-In your Vue components or instance you will have the option to add a data object, this is literally the data you want to have access to in your HTML or vue methods.
+In your Vue components or instance you will have the option to add a data object, this is literally the data/ state you want to have access to in your HTML or vue methods.
 
 *Used to inject vue into a simple website*
 ```javascript
@@ -81,7 +81,7 @@ const app = new Vue({
 ```
 ```html
 <!-- index.html -->
-<div>{{ myLongtitle }}</div>
+<h3>{{ myLongtitle }}</h3>
 ```
 
 *Used when bundling your app with Vue-cli (webpack under the hood)*
